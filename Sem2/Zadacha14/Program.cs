@@ -6,11 +6,7 @@ Console.Write("Введите число: ");
 //string num1 = Console.ReadLine() ?? "";
 
 int number1 = int.Parse(Console.ReadLine() ?? "");
-if (number1 % 7 == 0)
-{
-    Console.WriteLine($"{number1} -> да");
-}
-else if (number1 % 23 == 0)
+if (number1 % 7 == 0 && number1 % 23 == 0)
 {
     Console.WriteLine($"{number1} -> да");
 }
