@@ -3,29 +3,23 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 Console.Write("Введите число: ");
-int InsertNum = int.Parse(Console.ReadLine() ?? "");
+int insertNum = int.Parse(Console.ReadLine() ?? "");
 
-int num3 = InsertNum % 10;
-int num = InsertNum;
-int num4 = InsertNum;
+int tmp = insertNum;
 
-if (InsertNum < 100)
+if (insertNum < 100)
 {
-    Console.WriteLine($"{InsertNum} -> третьей цифры тютю");
-}
-else if (InsertNum > 99 && InsertNum < 1000)
-{
-    Console.WriteLine($"{InsertNum} -> {num3}");
+    Console.WriteLine($"{insertNum} -> третьей цифры тютю");
 }
 
-while (true)
+else
 {
-    if (InsertNum > 999)
+    while (tmp > 1000)
     {
-        num = InsertNum / 100;
-        InsertNum = num;
-        num = InsertNum % 10;
-    }
-    break;
+        {
+            tmp = tmp / 10; //можно ещё так tmp /= 10;
+        }                        
+    }    
+int num3 = tmp % 10;
+Console.WriteLine($"{insertNum} -> {num3}");
 }
-Console.WriteLine($"{num4} -> {num}");
