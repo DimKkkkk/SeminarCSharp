@@ -19,7 +19,7 @@ static void Dots_Coord(ref int x, ref int y)
     }
 }
 
-int x1=0, y1=0, x2=0, y2=0;
+int x1=0, y1=0, x2=0, y2=0; 
 
 Dots_Coord(ref x1, ref y1);
 Dots_Coord(ref x2, ref y2);
