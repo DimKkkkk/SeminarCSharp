@@ -21,8 +21,21 @@ int N = 0;
 Init_Digit(ref N);
 int index = 1;
 Console.Write($"{N} -> ");
+
 while (index <= N)
 {
-    Console.Write($"{index * index}, ");
+    if (index < N)   // при помощи этого условия ставим запятую и точку
+        Console.Write($"{index * index}, ");
+    else
+        Console.Write($"{index * index}.");
     index++;
 }
+
+
+/*Или так можно, при помощи тернарного способа проставить запятые и точку в конце
+while (index <= N)
+{
+    Console.Write($"{index * index}{(index == N ? ".":", ")}");  // вот тернарный способ {(index == N ? ".":", ")}
+    index++;
+} */
+
