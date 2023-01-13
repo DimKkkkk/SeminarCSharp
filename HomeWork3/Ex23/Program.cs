@@ -40,4 +40,4 @@ int N = int.Parse(ReadLine());
 for (int i=1; i<= N; i++)
 {
     Write($"{i * i * i}");
-}
+} */
