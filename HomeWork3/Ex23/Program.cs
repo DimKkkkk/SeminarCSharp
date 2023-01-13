@@ -32,3 +32,12 @@ while (index <= N)
     index++;
 }
 
+/* решение задачи гораздо проще
+Clear();
+Write("Введите число N: ");
+int N = int.Parse(ReadLine());
+
+for (int i=1; i<= N; i++)
+{
+    Write($"{i * i * i}");
+}
