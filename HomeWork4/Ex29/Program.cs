@@ -11,7 +11,7 @@ void PrintArr ()
     Console.Write("["); 
     for (int i = 0; i < 8; i++) 
     {
-        int num = new Random().Next(0, 1000);
+        int num = new Random().Next(0, 100);
         Console.Write($"{num}");
         if (i < 7) Console.Write(", ");
     }
