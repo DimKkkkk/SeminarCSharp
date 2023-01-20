@@ -17,27 +17,7 @@ int[] GetArray(int size, int minValue, int maxValue)
     }
     return res;
 }
-/*
-int Max(int[] arr)
-{
-    int max = 0;
-    for(int i = 0; i < arr.Length; i++)
-    {
-        if(arr[i] > max) max = arr[i];
-    }
-    return max;
-}
 
-int Min(int[] arr)
-{
-    int min = arr[0];
-    for(int i = 1; i < arr.Length; i++)
-    {
-        if(arr[i] < min) min = arr[i];
-    }
-    return min;
-}
-*/
 int Raznica(int[] arr)
 {
     int razn = 0;
