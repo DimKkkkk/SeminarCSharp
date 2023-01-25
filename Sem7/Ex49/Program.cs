@@ -60,7 +60,7 @@ void ChangeArray(int[,] inArray)
     {
         for (int j = 0; j < inArray.GetLength(1); j++) 
         {
-            if ((i % 2 != 0) &&(j % 2 != 0)) inArray[i, j] = inArray[i, j] * inArray[i, j];
+            if ((i % 2 != 0) &&(j % 2 != 0)) inArray[i, j] = inArray[i, j] * inArray[i, j]; //лучшая проверка на нечётность это не равно нулю !=0
         }     
     }
 }
