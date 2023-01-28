@@ -63,7 +63,7 @@ void ChangeArray(int[,] inArray)
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
-        for (int j = 0; j < inArray.GetLength(1); j++)
+        for (int j = 0; j < inArray.GetLength(1) - 1; j++)
         {
             for (int k = 0; k < inArray.GetLength(1) - 1; k++)
             {
