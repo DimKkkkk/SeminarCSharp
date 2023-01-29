@@ -20,10 +20,7 @@ int[,] array = GetArray(rows, columns, 0, 10);
 int[,] array2 = GetArray(rows, columns, 0, 10);
 PrintArray(array);
 Console.WriteLine();
-// PrintArray(array2);
-// Console.WriteLine();
 Console.WriteLine("Произведение двух матриц: ");
-//int[,] multiarray = MultiArray(array, array2);
 PrintArrayMulti(MultiArray(array, array2));
 
 
@@ -51,7 +48,7 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
     return result;
 }
 
-void PrintArrayMulti(int[,] inArray)
+void PrintArrayMulti(int[,] inArray)  // метод печати результата перемножения массивов
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
@@ -65,7 +62,7 @@ void PrintArrayMulti(int[,] inArray)
     }
 }
 
-void PrintArray(int[,] inArray)
+void PrintArray(int[,] inArray)  //метод печати двух массивов рядом друг с другом
 {
     int rowCount =  array.GetLength(0); // Строк в первой матрице
     int rowMedium = rowCount / 2; // Средняя строка
@@ -77,24 +74,26 @@ void PrintArray(int[,] inArray)
         Console.Write(" | ");
         for (int col = 0; col < col1Count; col++)
             Console.Write(array[row, col] + "  ");
-        Console.Write((row == rowMedium) ? "| * | " : "|   | ");
+        Console.Write((row == rowMedium) ? "| * | " : "|   | "); // знак умножения между массивами
         for (int col = 0; col < col2Count; col++)
             Console.Write(array2[row, col] + "  ");
         Console.WriteLine("|");
     }
 }
 
-int[,] MultiArray(int[,] array, int [,] array2)
+int[,] MultiArray(int[,] array, int [,] array2)  // метод перемножения двух массивов и его заполнение
 {
-    int[,] multiarray = new int[array.GetLength(0), array2.GetLength(1)];     
+    int[,] multiarray = new int[array.GetLength(0), array2.GetLength(1)];    // создаём массив, который будет получаться по формуле 
+    //умножения массивов - первая строка на первый столбец и т.д. 
     for (int i = 0; i < multiarray.GetLength(0); i++)
     {        
         for (int j = 0; j < multiarray.GetLength(1); j++)
         {
-            multiarray[i, j] = 0;
-            for (int n = 0; n < array.GetLength(1); n++)
+            multiarray[i, j] = 0; // ставим временный аккумулятор произведения, куда будут присваиваться произведение элементов двух наших массивов. 
+            //он обнуляется с переходом на каждую новую строку.
+            for (int n = 0; n < array.GetLength(1); n++) 
             {
-                multiarray[i, j] += array[i, n] * array2[n, j];
+                multiarray[i, j] += array[i, n] * array2[n, j]; // формула перемножения элементов и суммирование их
             }
             
         }    
