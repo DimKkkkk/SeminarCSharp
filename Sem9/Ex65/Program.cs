@@ -12,7 +12,10 @@ int numN = GetNumberFromUser();
 
 
 Console.Write($"M = {numM}; N = {numN} -> ");
-Console.WriteLine(PrintResult(numM, numN));
+string str = "\"";
+//Console.Write(str);
+Console.Write(str + PrintResult(numM, numN) + str);
+//Console.Write(str);
 
 
 int GetNumberFromUser()
