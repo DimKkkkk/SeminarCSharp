@@ -21,7 +21,7 @@ int GetNumberFromUser()
     while (true)
     {
         bool isCorrect = int.TryParse(Console.ReadLine(), out int number);
-        if (isCorrect) return number;
+        if (isCorrect && number > 0) return number;
         else Console.WriteLine("Ошибка ввода!");
     }
 }
